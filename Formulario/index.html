@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+    </head>
+    <body style="margin: 30px; font-family: 'Times New Roman', Times, serif;" >
+        <h2>Formulario de Inscripción</h2>
+        <form target="_self" method="post" autocomplete="on">
+            <label for="siglas_identificación"><strong>Tipo de identificación</strong></label>
+            <select id="siglas_identificación" name="siglas_identificación" title="Seleccione su tipo de identificación">
+                <option value="noseleccionado" selected>Seleccione una opción</option>
+                <option value="cédula_de_ciudadanía">Cédula de ciudadanía</option>
+                <option value="targeta_de_identidad">Tarjeta de identidad</option>
+                <option value="cédula_de_extranjeria">Cédula de extranjeria</option>
+                <option value="Pasaporte">Pasaporte</option>
+            </select><br>
+            <label for="numero_de_documento"><strong>Número de documento</strong></label>
+            <input type="text" pattern="[0-9]{6,12}" id="numero_de_documento" name="numero_de_documento" placeholder="Escriba su número de documento" title="Debe contener entre 6 y 12 números" required><br>
+            <label for="nombres"><strong>Nombres</strong></label>
+            <input type="text" minlength="3" maxlength="64" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}" id="nombres" name="nombres" placeholder="Escriba su nombre" title="Entre 3 y 64 caracteres, solo letras" required><br>
+            <label for="apellidos"><strong>Apellidos</strong></label>
+            <input type="text" minlength="3" maxlength="64" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}" id="apellidos" name="apellidos" placeholder="Escriba sus apellidos" title="Entre 3 y 64 caracteres, solo letras" required><br>
+            <label for="dirección"><strong>Dirección</strong></label>
+            <input type="text" id="dirección" name="dirección" placeholder="Escriba su dirección" title="Rellena este campo" required><br>
+            <label for="teléfono_celular"><strong>Teléfono celular</strong></label>
+            <input type="tel" pattern="[0-9]{9,10}" id="teléfono_celular" name="teléfono_celular" placeholder="Su número de teléfono" title="Debe tener entre 9 y 10 números" required><br>
+            <label for="correo_electrónico"><strong>Correo electrónico</strong></label>
+            <input type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" id="correo_electrónico" name="correo_electrónico" placeholder="Su correo electrónico" title="Debe contener @ y dominio valído" required><br>
+            <label for="usuario"><strong>Usuario</strong></label>
+            <input type="text" pattern="[A-Za-z0-9_]{5,20}" id="usuario" name="usuario" placeholder="Escriba como se registrará en el sistema" title="Entre 5 y 20 caracteres, letras o números" required><br>
+            <label for="contraseña"><strong>Contraseña</strong></label>
+            <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[._\-]).{8,25}" id="contraseña" name="contraseña" placeholder="Rellena este campo" title="Debe tener mínimo 8 caracteres, mayúscula, minúscula, número y simbolo(._-)" required><br>
+            <label for="fecha_de_incripción"><strong>Fecha de incripción</strong></label>
+            <input type="date" id="fecha_de_incripción" name="fecha_de_incripción" placeholder="Seleccione la fecha en que realizo la inscripción" title="Rellena este campo" required><br>
+            <fieldset>
+            <legend><strong>Hobbies</strong></legend><br>
+            <label><input type="checkbox" name="hobbies" value="deportes">Deportes</label><br>
+            <label><input type="checkbox" name="hobbies" value="música">Música</label><br>
+            <label><input type="checkbox" name="hobbies" value="lectura">Lectura</label><br>
+            <label><input type="checkbox" name="hobbies" value="videojuegos">Videojuegos</label><br>
+            <label><input type="checkbox" name="hobbies" value="programación">Programación</label><br><br>
+            </fieldset>
+            <button type="submit">Enviar formulario</button>
+        </form>
+    </body>
+</html>
